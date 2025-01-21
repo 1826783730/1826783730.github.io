@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>我们的爱情</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="css/sty.css" rel="stylesheet" />
+    <link href="css/one.css" rel="stylesheet" />
+
+    <!--照片墙-->
+    <!--必要样式-->
+    <link href="css/photopile.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <style type="text/css">
+        .txt{
+            color: white;
+            font-size: 18px;
+            line-height: 28px;
+            outline: none;
+        }
+        h2{
+           margin-top: 10px;
+        }
+        .timeline > li > .timeline-badge i {
+            font-size: 28px;
+            line-height: 45px;
+        }
+        .timeline > li > .timeline-badge {
+            color: #fff;
+             width: 45px;
+             height: 45px;
+             line-height: 45px;
+
+        }
+        .timeline > li > .left{
+            margin-right: 60px;
+            left: 100%;
+            top:22px;
+        }
+        .timeline > li > .right{
+            left: 25px;
+            top: 22px
+        }
+        .timeline >  .col-xs-12{
+            padding:0;
+        }
+        .timeline > li > .timeline-panel {
+             margin: 5px 0 11px 0;
+            width: 88%;
+        }
+        .timeline:before {
+           visibility: hidden;
+        }
+
+        /*.timeline .leftli:before {*/
+            /*top: -20px;*/
+            /*bottom: 0;*/
+            /*position: absolute;*/
+            /*content: " ";*/
+            /*width: 3px;*/
+            /*background-color: #e74851;*/
+            /*left: 100%;*/
+            /*margin-left: -13px;*/
+            /*display: inline;*/
+        /*}*/
+        .txtcolor{
+            font-size: 15px;
+        }
+        .leftli  img{
+            width: 102px;
+            height: 102px;
+            float: left;
+            padding: 15px 20px 15px 0;
+        }
+        .rightli  img{
+            width: 102px;
+            height: 102px;
+            float: right;
+            padding: 15px 20px 15px 0;
+        }
+        .timeline-foot{
+            font-size: 13px;
+            margin: 3px 8px 0px 3px;
+        }
+        .timeline > li > .timeline-panel:before{
+            right: 0;
+            top: 26px;
+            clear: none;
+
+        }
+        .timeline > li > .timeline-panel-right:after {
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            margin-right: 0;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid #fff;
+            border-right: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+        }
+        .timeline > li > .timeline-panel-right:before{
+            right: 0;
+            top: 26px;
+            position: absolute;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid #e74851;
+            border-right: 0 solid #e74851;
+            border-bottom: 15px solid transparent;
+            content: " ";
+        }
+        .timeline > li > .timeline-panel-left:before{
+            left: -30px;
+            top: 26px;
+            right: auto;
+            position: absolute;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-right: 15px solid #e74851;
+            border-bottom: 15px solid transparent;
+            content: " ";
+        }
+        .timeline > li > .timeline-panel-left:after {
+            position: absolute;
+            top: 27px;
+            left: -28px;
+            right: auto;
+            margin-right: 0;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid transparent;
+            border-right: 14px solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+        }
+
+
+        /*.timeline .rigthli:before {*/
+            /*top: 0px;*/
+            /*bottom: 0;*/
+            /*position: absolute;*/
+            /*content: " ";*/
+            /*width: 100%;*/
+            /*height: 3px;*/
+            /*background-color: #e74851;*/
+            /*left: 10%;*/
+            /*margin-left: -13px;*/
+            /*display: inline;*/
+        /*}*/
+
+        .heng {
+
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 3px;
+            background-color: #e74851;
+           ;
+            margin-left: 12px;
+            display: inline;
+        }
+        .heng_bottom {
+
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 3px;
+            background-color: #e74851;
+        ;
+            margin-left: 12px;
+            display: inline;
+        }
+
+        .left_shu {
+            top: -11px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #e74851;
+            left: 100%;
+            margin-left: -13px;
+            display: inline;
+        }
+        .left_shu_shang {
+            top: -20px;
+            bottom: 0;
+            height: 15px;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #e74851;
+            left: 100%;
+            margin-left: -13px;
+            display: inline;
+        }
+        .right_shu {
+            top: -10px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #e74851;
+            left: 25px;
+            margin-left: -13px;
+            display: inline;
+        }
+
+    </style>
+</head>
+<body class="body">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+     data-anijs="if: mouseover, do: bounceIn animated"
+     style="background-color: #f99ec7 !important;box-shadow: 0 0 2px 0 #acacac;">
+    <img class="pull-left col-xs-5" style="display: inline-block !important;padding: 13px 5px 0 12px"
+         src="images/logo.png" title="">
+    <div class="col-xs-7 text-center txt" data-bind="" style="line-height: 55px;margin-top: 10px">
+        陪伴是最长情的告白
+    </div>
+    <div class="col-xs-12 text-center txt" style="padding-right:5px;padding-left:5px;line-height: 30px;font-size: 14px">你的出现，就足够占据我的余生</div>
+</nav>
+<div class="container-fluid" style="margin-top: 98px">
+    <div id="begin" class="col-xs-12 text-center txt underline" data-anijs="if: mouseover, do: swing animated" >
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;font-size: 18px">我们的遇见，是爱情的开始</h2>
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;font-size: 18px">我们的爱情，是幸福的开始</h2>
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;font-size: 18px">我们的幸福，是平平淡淡的陪伴</h2>
+    </div>
+    <span class="wow fadeInUp animated col-xs-12 text-center" data-wow-delay="0.7s" style="color: rgb(239, 106, 138);
+         visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;margin: 15px auto;font-size: 16px">
+        ♥ 2017-09-16 ♥</span>
+    <div class="col-xs-12">
+            <div class="col-xs-6 text-right  man wow flipInX animated" data-wow-delay="0.5s"
+                 style="visibility: visible; animation-delay: 0.5s; animation-name: flipInX;
+                 padding: 0"
+                 data-anijs="if: click, do: rollOut animated, to: .boy, after: $removeAnim">
+              <img src="images/boy.png" alt="" class="col-xs-12"
+              style="padding: 15px 25px 15px 15px">
+            </div>
+            <div class="and" style="margin-top: 45px;font-size: 65px">&</div>
+            <div class="col-xs-6 text-left  woman wow flipInX animated"
+                 data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: flipInX;padding: 0;margin-top: 0"
+                 data-anijs="if: click, do: rollIn animated, to: .girl, after: $removeAnim">
+                        <img src="images/girl.png" alt="" class="col-xs-12" style="padding: 15px 15px 15px 25px">
+            </div>
+    </div>
+    <div class="col-xs-12 text-center txt underline">
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;">我们的爱情历程</h2>
+    </div>
+
+    <div id="dslc-module-4" class=" dslc-module-Pluton_Time_Line dslc-in-viewport-check dslc-in-viewport-anim-none   dslc-module-handle-like-regular dslc-in-viewport" data-module-id="4" data-dslc-module-id="Pluton_Time_Line" data-dslc-module-size="12" data-dslc-anim="none" data-dslc-anim-delay="0" data-dslc-anim-duration="650" data-dslc-anim-easing="ease" data-dslc-preset="" style="animation: forwards 0.65s ease 0s 1 normal none running;">
+        <div class="ilove_timeline">
+            <div class="col-md-12">
+                <ul class="timeline col-xs-12" >
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="left_shu_shang"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/x1.png">
+                                <img src="images/x1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor"> 那一天，在体育馆遇到你，
+                                  你的手机不小心掉到了坑里，
+                                  我用铁钩勾上来，
+                                  同时勾到了你的心
+                                </p>
+
+                                <div class="timeline-foot">2017年9月10日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/x2.png">
+                                <img src="images/x2.png" alt="" style="width: 102px;height: 102px;float: right">
+                               </a><p class="txtcolor">这天我们正式在一起了，现在都记得那个下午，像发生在昨天</p>
+
+
+                                <div class="timeline-foot">2017年9月16日</div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/lufei-1.jpg">
+                                <img src="images/lufei.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>  <p class="txtcolor">第一份礼物，记得有一次你上美术课，给我发了个路飞照片，
+                                    我就画下来行给你了，这算是我给你的第一份礼物吧</p>
+
+
+                                <div class="timeline-foot">2017年9月21日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/03.jpeg">
+                                <img src="images/rugufu.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次去荣国府，是周个末，拍了很多美美的照片。</p>
+
+                                <div class="timeline-foot">2017年10月22日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/dengzhan-1.jpg">
+                                <img src="images/dengzhan.jpg" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一个100天的时候，我们一起去看了灯展，当然，再漂亮的灯光也不及你的美</p>
+
+                                <div class="timeline-foot">2017年12月24日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/xingtai-1.png">
+                                <img src="images/xingtai.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次去游乐场，记得那天风特别大，
+                                    不能做过山车，但是做了摩轮（听说在摩天轮的最顶端接吻永远不会分手）</p>
+
+                                <div class="timeline-foot">2018年4月06日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/520-1.jpg">
+                                <img src="images/520.jpg" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">我们在一起的第一个520，不知道你还记不记得这幅画，我画的很用心哦</p>
+
+                                <div class="timeline-foot">2018年5月20日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/09.jpg">
+                                <img src="images/zhenrencs.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">我们第一次去玩真人cs，虽然有点热，但是玩的很开心</p>
+
+
+                                <div class="timeline-foot">2018年5月26日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/shengri1-1.jpg">
+                                <img src="images/shengri1.jpg" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一次给你过生日，记得当时只买了一个小蛋糕，但是还是没有吃完</p>
+
+                                <div class="timeline-foot">2018年07月01日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/xinimg-1.jpg">
+                                <img src="images/xinimg.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次给你拼照片，花了整整一上午，
+                                    但是我觉得很有必要，要表达一下我对你掩藏不住的爱</p>
+
+                                <div class="timeline-foot">2018年07月21日</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/06.jpg">
+                                <img src="images/yinian.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一次一年，时光飞逝，但是对你的爱只增不减</p>
+
+                                <div class="timeline-foot">2018年09月16日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/zijishengri-1.jpg">
+                                <img src="images/zijishengri.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次一起给我过生日，真的很惊喜，你给我准备的礼物和布置，很感动！</p>
+                            </div>
+
+                                <div class="timeline-foot">2018年09月22日</div>
+                            </div>
+
+                    </li>
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/bengchuang-1.jpg">
+                                <img src="images/bengchuang.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一次去玩蹦床，当然去之前还吃了美食，开心的一天^_^</p>
+
+                                <div class="timeline-foot">2019年01月20日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/tumenguan1.jpg">
+                                <img src="images/tumenguan.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次去土门关，五一的人特别多，但是也开心的逛了半天。
+                                    因为只要和最爱的人在一起，就是最开心的事 ♥</p>
+                            </div>
+
+                            <div class="timeline-foot">2019年5月2日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/huanlegu-1.jpeg">
+                                <img src="images/huanlegu.jpeg" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一次欢乐谷，陪你从白天玩到黑夜，
+                                    看到你的笑脸，一起疲惫都消失不见！</p>
+
+                                <div class="timeline-foot">2019年8月19日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/2zhounian1.jpg">
+                                <img src="images/2zhounian1.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第二次相恋纪念日，送给了你喜欢的相机，相机
+                                    美美的，相机里的你也美美的！</p>
+                            </div>
+
+                            <div class="timeline-foot">2019年9月16日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/xuedi520-1.jpeg">
+                                <img src="images/xuedi520.jpeg" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">第一次画雪地520，那天雪很大，
+                                    但是一点都不冷，因为一想到你开心的样子，世界都变得温暖了！</p>
+
+                                <div class="timeline-foot">2020年1月5日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/wangzhepifu1.jpg">
+                                <img src="images/wangzhepifu1.jpg" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">第一次送王者皮肤，之前不送是因为没找到合适的，
+                                    看到这么漂亮的妲己，我猜你一定会喜欢！</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年1月29日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/3dxiangce.png">
+                                <img src="images/3dxiangce.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">2020年的情人节，我在网站中加了一个3D相册，记得看到相册的你很是开心！</p>
+
+                                <div class="timeline-foot">2020年2月14日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/xianglian-1.png">
+                                <img src="images/xianglian.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">2020由于疫情的影响，很长时间没有见面，坚持下来真的不容易，我们没有被距离和时间而打败，它作为奖励！也寓意着我们的感情</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年5月07日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/20200515zaocan2.png">
+                                <img src="images/20200515zaocan2.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">由于疫情在家办公，你给我准备了一大箱的早餐！太用心了</p>
+
+                                <div class="timeline-foot">2020年5月15日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/20200520520jie1.png">
+                                <img src="images/20200520520jie1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">520收到了你送的花花，520送你了好看的汉服</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年5月20日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/2020liuyi.png">
+                                <img src="images/2020liuyi.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">又是一年儿童节，希望在我的守护下你永远都不用长大，也希望永远在我守护下！</p>
+
+                                <div class="timeline-foot">2020年6月1日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/20200610999day1-1.png">
+                                <img src="images/20200610999day1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">999天！我们因手机相识，今天送你一个和我一样的手机作为纪念。谢谢你的礼物我很开心哦</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年6月10日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/huaweishoubiao1-1.png">
+                                <img src="images/huaweishoubiao1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">我的手环坏了，你送了我新款的华为手表，好看</p>
+
+                                <div class="timeline-foot">2020年6月20日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/20200708sanshengri1-1.png">
+                                <img src="images/20200708sanshengri1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">和你在一起的第三个生日！！生日快乐宝宝！（上次买的汉服做的外形）</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年7月8日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/2020guangzhou1-1.png">
+                                <img src="images/2020guangzhou1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">时隔半年，终于见面，真的不容易,用笑容代替眼泪，迎接最美的你 广州之旅-你就是我最想看的风景</p>
+
+                                <div class="timeline-foot">2020年7月17日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/2020qixi1-1.png">
+                                <img src="images/2020qixi1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">2020年的七夕，疫情还在，我们之间的见面就好似牛郎织女一样，终于等到了七夕，你下凡与我相见。因此我绣了这件衣服做为纪念♥</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年8月25日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/20200916sanzhounian1-1.png">
+                                <img src="images/20200916sanzhounian1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">三周年！一转眼就3年了，这就是两个人一起努力的结果，没有被时间而冲散，反而更加牢固。</p>
+
+                                <div class="timeline-foot">2020年9月16日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/20201211liaotianpintu1.png">
+                                <img src="images/20201211liaotianpintu1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">坚持这么久，沟通真的很重要，虽然2020见面时间不多，但是每天的通话没有间断。你的拼图真的用心了</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年12月11日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/20201215guangying1-1.png">
+                                <img src="images/20201215guangying1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">我的回忆中充满你的光影！这又是2020年为数不多的一次相见，为此还很‘幸运’的居家隔离了哈哈哈</p>
+
+                                <div class="timeline-foot">2020年12月15日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/2020shengdan2-1.png">
+                                <img src="images/2020shengdan2.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">2020的圣诞节，收到了你送的一箱子苹果和糖果，我送的是一盒草莓和棒棒糖，一箱苹果和一盒草莓真不愧是情侣</p>
+                            </div>
+
+                            <div class="timeline-foot">2020年12月25日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/deyunshekouhong1.png">
+                                <img src="images/deyunshekouhong1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">马上2021年的新年了，又怕由于疫情原因导致快递停发，所以彼此年前提前送了些礼物，比如这个唇釉 还是比较好看的</p>
+
+                                <div class="timeline-foot">2021年1月20日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/xianshiqiguo1.png">
+                                <img src="images/xianshiqiguo1.png" alt="" style="width: 102px;height: 102px;float: right">
+                             </a><p class="txtcolor">2021收到的新年礼物有一个很喜欢的显示器，还有电饼铛做早餐都方便了</p>
+                            </div>
+
+                            <div class="timeline-foot">2021年1月22日</div>
+                        </div>
+                        <!--</div>-->
+                    </li>
+
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href="images/zhangshangbaoxiangce1-1.png">
+                                <img src="images/zhangshangbaoxiangce1.png" alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor">收到了非常用心的礼物，自己裁剪生成的相册真的很感动，这已经是收到的第二个相册了</p>
+
+                                <div class="timeline-foot">2021年2月6日</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="heng_bottom"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href="images/2021guoquweilai1.png">
+                                <img src="images/2021guoquweilai1.png" alt="" style="width: 102px;height: 102px;float: right">
+                            </a>  <p class="txtcolor">2021的情人节，我也更新了我为你做的相册（就是这个网址）</p>
+                            </div>
+
+                            <div class="timeline-foot">2021年2月14日</div>
+                        </div>
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <p class="text-center" style="font-size: 10px">未完待续。。</p>
+    <div class="col-xs-12 text-center txt underline">
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;">我们的山盟海誓</h2>
+    </div>
+    <div class="col-xs-12 text-center "
+         data-anijs="if: scroll,on: window,do: zoomInDown animated, before: $scrollReveal repeat">
+        <span class="col-xs-12" style="font-family: 'Great Vibes',cursive;color: #283a44; font-size: 16px;
+        margin: 15px;padding: 15px;line-height: 25px">
+            与你的相遇，是命中注定的一生一世。与你的相爱，是命中注定的地老天荒<br>
+            今生携手徜徉天地间，为你遮风挡雨，相濡以沫，并肩悠游滚滚红尘中<br>
+            即使有一天，你的步履变得蹒跚，青丝变成白发，红润的脸上爬满了皱纹，但我仍要携着你的手，漫步在夕阳的余辉下<br>
+　　     你，我一生最爱的人;你，我一生最想的人;你，我一生守候的人;你，我一生唯一的人<br>
+           不论你生病或是健康、富有或贫穷，始终忠於你，直到离开世界
+　</span>
+    </div>
+
+    <div class="col-xs-12 text-center txt underline">
+        <h2 class="col-xs-12" style="font-family: 'Great Vibes',cursive;
+    color: #283a44; padding-bottom: 0px;">我们的爱情见证</h2>
+    </div>
+
+    <div class="photopile-wrapper col-xs-12 text-center" data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal repeat">
+        <ul class="photopile col-xs-12">
+            <li style="transform: rotate(-3deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle first">
+                <a href="images/01.jpg" style="padding: 2px;">
+                    <img src="images/01.jpg" alt="操场">
+                </a>
+            </li>
+            <li style="transform: rotate(-5deg); margin: -25px; z-index: 5; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/02.jpeg" style="padding: 2px;">
+                    <img src="images/02.jpeg" alt="荣国府">
+                </a>
+            </li>
+            <li style="transform: rotate(26deg); margin: -25px; z-index: 1; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/03.jpeg" style="padding: 2px;">
+                    <img src="images/03.jpeg" alt="荣国府">
+                </a>
+            </li>
+
+            <li style="transform: rotate(26deg); margin: -25px; z-index: 1; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/05.jpeg" style="padding: 2px;">
+                    <img src="images/05.jpeg" alt="合照">
+                </a>
+            </li>
+            <li style="transform: rotate(33deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/06.jpg" style="padding: 2px;">
+                    <img src="images/06.jpg" alt="一周年">
+                </a>
+            </li>
+            <li style="transform: rotate(-24deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/07.jpg" style="padding: 2px;">
+                    <img src="images/07.jpg" alt="全城热恋">
+                </a>
+            </li>
+            <li style="transform: rotate(-6deg); margin: -25px; z-index: 2; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/08.jpg" style="padding: 2px;">
+                    <img src="images/08.jpg" alt="西餐">
+                </a>
+            </li>
+            <li style="transform: rotate(39deg); margin: -25px; z-index: 1; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle">
+                <a href="images/09.jpg" style="padding: 2px;">
+                    <img src="images/zhenrencs.jpg" alt="CS">
+                </a>
+            </li>
+            <li style="transform: rotate(26deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/10.jpg" style="padding: 2px;">
+                    <img src="images/10.jpg" alt="CS后山">
+                </a>
+            </li>
+            <!--end one-->
+
+            <li style="transform: rotate(2deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2zhounian1.jpg" style="padding: 2px;">
+                    <img src="images/2zhounian1.jpg" alt="两周年">
+                </a>
+            </li>
+            <li style="transform: rotate(-8deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying001.png" style="padding: 2px;">
+                    <img src="images/2020guangying001.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(16deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying002.png" style="padding: 2px;">
+                    <img src="images/2020guangying002.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(26deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying003.png" style="padding: 2px;">
+                    <img src="images/2020guangying003.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(31deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying004.png" style="padding: 2px;">
+                    <img src="images/2020guangying004.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(22deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying005.png" style="padding: 2px;">
+                    <img src="images/2020guangying005.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(-7deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020guangying006.png" style="padding: 2px;">
+                    <img src="images/2020guangying006.png" alt="忆·光影">
+                </a>
+            </li>
+            <li style="transform: rotate(10deg); margin: -25px; z-index: 3; background: white none repeat scroll 0% 0%;"
+                class="ui-draggable ui-draggable-handle last">
+                <a href="images/2020sanzhounian01.png" style="padding: 2px;">
+                    <img src="images/2020sanzhounian01.png" alt="三周年">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p class="text-center" style="font-size: 10px">告诉你个秘密 ，这个照片可以点开和拖动哦</p>
+    <p class="text-center" style="font-size: 10px"><a href="xuehua.html">->倒计时<-</a></p>
+    <p class="text-center" style="font-size: 10px"><a href="3dxiangce.html">->相册<-</a></p>
+    <p class="text-center" style="font-size: 10px">相册可以放大和点开(^～^)</p>
+
+    <div style="width:300px;margin:0 auto; padding:20px 0;">
+        <img src="jscss/beian.png">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302001760" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11011302001760号</p></a>
+    </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/photopile.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            PhotoPile().scatter();
+        });
+        $(document).ready(function() {
+
+
+            var heng = $(".heng").width();
+            console.log(heng);
+            $(".heng").width(heng-25+'px');
+        });
+    </script>
+</div>
+<audio id="bgmMusic" src="https://lg-jji4xr8s-1257436504.cos.ap-shanghai.myqcloud.com/wyssusu/images/bgmdongmian1.mp3"
+preload="auto" type="audio/mp3" autoplay="" loop=""></audio>
+<script src="js/anijs-min.js"></script>
+<script src="js/anijs-helper-scrollreveal-min.js"></script>
+<script src="js/flu.js" type="text/javascript"></script>
+<!--<div class="heart "  rel="like" style="">
+    <p id="pClick" style="text-align: center;font-size: 10px;margin-bottom: 0px;
+    margin-top: 55px;">祝福</p>
+    <div class="heartCa"></div></div>-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('body').on("click",'.heart',function(){
+            $(this).css("background-position","")
+            $(this).addClass("heartAnimation");
+            $(this).addClass("clickH");
+            $('#pClick').addClass('tC');
+            setTimeout(function () {
+                $(".heart").removeClass('heartAnimation');
+            }, 1000);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<title>我们的爱情</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+<link href="css/sty.css" rel="stylesheet" />
+<link href="css/one.css" rel="stylesheet" />
+
+<!--照片墙-->
+<!--必要样式-->
+<link href="css/photopile.css" rel="stylesheet">
+<link rel="stylesheet" href="css/animate.css">
+
+<style type="text/css">
+    .txt{
+        color: white;
+        font-size: 18px;
+        line-height: 28px;
+        outline: none;
+    }
+    h2{
+        margin-top: 10px;
+    }
+    .timeline > li > .timeline-badge i {
+        font-size: 28px;
+        line-height: 45px;
+    }
+    .timeline > li > .timeline-badge {
+        color: #fff;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+
+    }
+    .timeline > li > .left{
+        margin-right: 60px;
+        left: 100%;
+        top:22px;
+    }
+    .timeline > li > .right{
+        left: 25px;
+        top: 22px
+    }
+    .timeline >  .col-xs-12{
+        padding:0;
+    }
+    .timeline > li > .timeline-panel {
+        margin: 5px 0 11px 0;
+        width: 88%;
+    }
+    .timeline:before {
+        visibility: hidden;
+    }
+
+    /*.timeline .leftli:before {*/
+    /*top: -20px;*/
+    /*bottom: 0;*/
+    /*position: absolute;*/
+    /*content: " ";*/
+    /*width: 3px;*/
+    /*background-color: #e74851;*/
+    /*left: 100%;*/
+    /*margin-left: -13px;*/
+    /*display: inline;*/
+    /*}*/
+    .txtcolor{
+        font-size: 15px;
+    }
+    .leftli  img{
+        width: 102px;
+        height: 102px;
+        float: left;
+        padding: 15px 20px 15px 0;
+    }
+    .rightli  img{
+        width: 102px;
+        height: 102px;
+        float: right;
+        padding: 15px 20px 15px 0;
+    }
+    .timeline-foot{
+        font-size: 13px;
+        margin: 3px 8px 0px 3px;
+    }
+    .timeline > li > .timeline-panel:before{
+        right: 0;
+        top: 26px;
+        clear: none;
+
+    }
+    .timeline > li > .timeline-panel-right:after {
+        position: absolute;
+        top: 27px;
+        right: -14px;
+        margin-right: 0;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid #fff;
+        border-right: 0 solid #fff;
+        border-bottom: 14px solid transparent;
+        content: " ";
+    }
+    .timeline > li > .timeline-panel-right:before{
+        right: 0;
+        top: 26px;
+        position: absolute;
+        display: inline-block;
+        border-top: 15px solid transparent;
+        border-left: 15px solid #e74851;
+        border-right: 0 solid #e74851;
+        border-bottom: 15px solid transparent;
+        content: " ";
+    }
+    .timeline > li > .timeline-panel-left:before{
+        left: -30px;
+        top: 26px;
+        right: auto;
+        position: absolute;
+        display: inline-block;
+        border-top: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 15px solid #e74851;
+        border-bottom: 15px solid transparent;
+        content: " ";
+    }
+    .timeline > li > .timeline-panel-left:after {
+        position: absolute;
+        top: 27px;
+        left: -28px;
+        right: auto;
+        margin-right: 0;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid transparent;
+        border-right: 14px solid #fff;
+        border-bottom: 14px solid transparent;
+        content: " ";
+    }
+
+
+    /*.timeline .rigthli:before {*/
+    /*top: 0px;*/
+    /*bottom: 0;*/
+    /*position: absolute;*/
+    /*content: " ";*/
+    /*width: 100%;*/
+    /*height: 3px;*/
+    /*background-color: #e74851;*/
+    /*left: 10%;*/
+    /*margin-left: -13px;*/
+    /*display: inline;*/
+    /*}*/
+
+    .heng {
+
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 3px;
+        background-color: #e74851;
+    ;
+        margin-left: 12px;
+        display: inline;
+    }
+    .heng_bottom {
+
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 3px;
+        background-color: #e74851;
+    ;
+        margin-left: 12px;
+        display: inline;
+    }
+
+    .left_shu {
+        top: -11px;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #e74851;
+        left: 100%;
+        margin-left: -13px;
+        display: inline;
+    }
+    .left_shu_shang {
+        top: -20px;
+        bottom: 0;
+        height: 15px;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #e74851;
+        left: 100%;
+        margin-left: -13px;
+        display: inline;
+    }
+    .right_shu {
+        top: -10px;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #e74851;
+        left: 25px;
+        margin-left: -13px;
+        display: inline;
+    }
+
+</style>
+</head>
+<body>
+
+<ul class="timeline" id="timeline"></ul>
+<script>
+    // 使用fetch API异步加载JSON文件
+    fetch('timelineItems.json')
+        .then(response => response.json()) // 解析JSON数据
+        .then(data => renderTimeline(data)) // 使用解析后的数据渲染时间线
+        .catch(error => console.error('加载时间线数据失败:', error));
+
+    function renderTimeline(items) {
+        const timeline = document.getElementById('timeline');
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.className = `timeline-item ${item.position}`;
+            li.innerHTML = `
+                    <li class="col-xs-12 leftli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="left_shu"></div>
+                        <div class="left_shu_shang"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated left" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-right wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                            <div class="timeline-body"><a href=${item.image}>
+                                <img src=${item.image} alt="" style="width: 102px;height: 102px;float: left">
+                             </a>   <p class="txtcolor"> ${item.content}
+                                </p>
+
+                                <div class="timeline-foot">${item.date}</div>
+                            </div>
+                        </div>
+                    </li>
+
+            `;
+            if (item.content2.length>0){
+            li.innerHTML=li.innerHTML+`<li class="col-xs-12 rightli" data-anijs="if: scroll, on: window, do: slideInLeft   animated, before: $scrollReveal repeat">
+                        <div class="right_shu"></div>
+                        <div class="heng"></div>
+                        <div class="timeline-badge wow fadeInUp animated right" data-wow-delay="0.5s"
+                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                            <i> ♥ </i>
+                        </div>
+                        <div class="timeline-panel timeline-panel-left wow fadeInLeft animated" data-wow-delay="0.7s" style="
+                        visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;float: right">
+                            <div class="timeline-body"><a href=${item.image2}>
+                                <img src=${item.image2} alt="" style="width: 102px;height: 102px;float: right">
+                               </a><p class="txtcolor">${item.content2}</p>
+
+                                <div class="timeline-foot">${item.date2}</div>
+                            </div>
+                        </div>
+                    </li>`;
+            }
+            timeline.appendChild(li);
+        });
+    }
+</script>
+
+
+</body>
+</html>
